@@ -72,6 +72,7 @@
                         this.$store.commit('minusNewMsg')
                     }
                 }
+                console.log(this.item)
             }
         },
         // 参考 https://vuefe.cn/v2/guide/custom-directive.html

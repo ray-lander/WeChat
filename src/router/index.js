@@ -7,7 +7,8 @@ const routes = [{
         path: '/',
         name: "微信",
         component: resolve => require(["../components/wechat/wechat.vue"], resolve)
-    }, {
+    },
+    {
         path: '/wechat/dialogue',
         name: "",
         components: {
@@ -86,37 +87,51 @@ const routes = [{
         name: "",
         components: {
             "default": resolve => require(["../components/contact/contact.vue"], resolve),
-            "subPage": resolve => require(["../components/contact/new-friends.vue"], resolve)
+            "subPage": resolve => require(["../components/contact/new-friends.vue"], resolve),
         }
-    }, {
+    },
+    {
+        path: '/contact/new-friends/add-friend',
+        name: "添加好友",
+        components: {
+            "subPage": resolve => require(["../components/contact/add-friend.vue"], resolve)
+        }
+    },
+     {
         path: '/contact/tags',
         name: "新的朋友",
         components: {
             "default": resolve => require(["../components/contact/contact.vue"], resolve),
             "subPage": resolve => require(["../components/contact/tags.vue"], resolve)
         }
-    }, {
+    }, 
+    {
         path: '/explore',
         name: "发现",
         component: resolve => require(["../components/explore/explore.vue"], resolve)
-    }, {
+    }, 
+    {
         path: '/explore/moments',
         name: "朋友圈",
         components: {
             "default": resolve => require(["../components/explore/explore.vue"], resolve),
             "subPage": resolve => require(["../components/explore/moments.vue"], resolve)
         }
-    }, {
+    },
+     {
         path: '/self',
         name: "我",
         component: resolve => require(["../components/self/self.vue"], resolve)
-    }, {
+    },
+     {
         path: '/self/album',
-        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/common/album.vue"], resolve) }
+        components: { "default": resolve => require(["../components/self/self.vue"], resolve), 
+        "subPage": resolve => require(["../components/common/album.vue"], resolve) }
     },
     {
         path: '/self/settings',
-        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/self/settings.vue"], resolve) }
+        components: { "default": resolve => require(["../components/self/self.vue"], resolve), 
+        "subPage": resolve => require(["../components/self/settings.vue"], resolve) }
     }, {
         path: '/self/settings/security',
         components: { "subPage": resolve => require(["../components/self/settings/security.vue"], resolve) }
@@ -134,7 +149,10 @@ const routes = [{
     },
     {
         path: '/self/profile',
-        components: { "default": resolve => require(["../components/self/self.vue"], resolve), "subPage": resolve => require(["../components/common/profile.vue"], resolve) }
+        components: { 
+            "default": resolve => require(["../components/self/self.vue"], resolve), 
+            "subPage": resolve => require(["../components/common/profile.vue"], resolve) 
+        }
     }, {
         path: '/self/profile/my-qrcode',
         components: { "subPage": resolve => require(["../components/self/my-qrcode.vue"], resolve) }

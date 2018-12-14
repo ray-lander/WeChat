@@ -2,7 +2,11 @@
     <!--新的朋友组件 交互没写完-->
     <div :class="{'search-open-contact':!$store.state.headerStatus}">
         <header id="wx-header">
-            <div class="other"><span>添加朋友</span></div>
+            <div class="other">
+                <router-link to="/contact/new-friends/add-friend">
+                    <span class="add_friend">添加朋友</span>                    
+                </router-link>
+            </div>
             <div class="center">
                 <router-link to="/contact" tag="div" class="iconfont icon-return-arrow">
                     <span>通讯录</span>
@@ -66,4 +70,9 @@
 </script>
 <style>
     @import "../../assets/css/new-friends.css";
+    #wx-header .other .add_friend {
+        font-size: 16px;
+        display: inline-block;
+        color: #fff;
+    }
 </style>

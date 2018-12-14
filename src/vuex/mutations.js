@@ -9,6 +9,8 @@ const mutations = {
     //设置当前页面名字
     setPageName(state, name) {
         state.currentPageName = name
+        // console.log(state)
+        // console.log(name)
     },
     //设置前一页名字 已遗弃
     // setBackPageName(state, name) {
